@@ -1,0 +1,10 @@
+@mixin media($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+  @if $size == 576px {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+}

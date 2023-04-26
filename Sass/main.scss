@@ -1,0 +1,96 @@
+@use "../Sass/helpers/varaibles" as *;
+@use "../Sass/helpers/mixins" as *;
+@use "../Sass/components/global-rules";
+// Start Page
+.page {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 75px;
+  .head {
+    text-align: center;
+    p {
+      margin: 0;
+    }
+    p:first-child {
+      font-size: $fontSize;
+      font-weight: 400;
+      color: $veryDarkBlue;
+      @include media(575px) {
+        font-size: 24px;
+      }
+    }
+    p:nth-child(2) {
+      font-size: $fontSize;
+      font-weight: 600;
+      color: $veryDarkBlue;
+      margin-bottom: 10px;
+      @include media(575px) {
+        font-size: 24px;
+      }
+    }
+    p:last-child {
+      width: 500px;
+      max-width: 100%;
+      color: $gryishBlue;
+      margin: auto;
+      margin-top: 0;
+      line-height: 1.6;
+    }
+  }
+  .content {
+    width: 1200px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    @include media(575px) {
+      flex-direction: column;
+    }
+    .card-holder {
+      flex: 1;
+      @include media(576px) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    .card {
+      background-color: white;
+      border-radius: 6px;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-top: 4px solid transparent;
+      -webkit-box-shadow: 2px 8px 14px 0 hsla(229, 6%, 66%, 0.6);
+      -moz-box-shadow: 2px 8px 14px 0 hsla(229, 6%, 66%, 0.6);
+      box-shadow: 2px 8px 14px 0 hsla(229, 6%, 66%, 0.6);
+      img {
+        display: block;
+        margin-left: auto;
+      }
+    }
+    .super {
+      border-top-color: $cyan;
+    }
+    .team {
+      border-top-color: $red;
+    }
+    .karma {
+      border-top-color: $orange;
+    }
+    .calculator {
+      border-top-color: $blue;
+    }
+    h2 {
+      margin-bottom: 10px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+    p {
+      color: $gryishBlue;
+      line-height: 1.7;
+      margin: auto 0 25px;
+    }
+  }
+}
